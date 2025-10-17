@@ -213,7 +213,7 @@ class LightningSpectrogramModule(SpectrogramModule, L.LightningModule):
                 kwargs["logger"] = L.pytorch.loggers.WandbLogger()
 
             # update the run config with information about the model
-            wandb_session.config.update(self._generate_wandb_config())
+            # wandb_session.config.update(self._generate_wandb_config()) fix PP
 
             # update the run config with training parameters
             wandb_session.config.update(
